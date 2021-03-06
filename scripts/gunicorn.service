@@ -5,7 +5,7 @@ Description=Gunicorn Daemon
 User=ubuntu
 Group=ubuntu
 WorkingDirectory=/home/ubuntu/env/django-sample
-ExecStart=/home/ubuntu/env/bin/gunicorn --bind unix:/tmp/gunicorn.sock heestagram.wsgi
+ExecStart=/home/ubuntu/env/bin/gunicorn heestagram.wsgi --bind 0:8000
 
 [Install]
 WantedBy=multi-user.target
